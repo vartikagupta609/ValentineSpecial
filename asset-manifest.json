@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/vartikagupta609/ValentineSpecial.git/static/css/main.683e40c2.css",
-    "main.js": "/vartikagupta609/ValentineSpecial.git/static/js/main.d0213591.js",
-    "static/js/453.3417c19d.chunk.js": "/vartikagupta609/ValentineSpecial.git/static/js/453.3417c19d.chunk.js",
-    "index.html": "/vartikagupta609/ValentineSpecial.git/index.html",
-    "main.683e40c2.css.map": "/vartikagupta609/ValentineSpecial.git/static/css/main.683e40c2.css.map",
-    "main.d0213591.js.map": "/vartikagupta609/ValentineSpecial.git/static/js/main.d0213591.js.map",
-    "453.3417c19d.chunk.js.map": "/vartikagupta609/ValentineSpecial.git/static/js/453.3417c19d.chunk.js.map"
+    "main.css": "/ValentineSpecial/static/css/main.683e40c2.css",
+    "main.js": "/ValentineSpecial/static/js/main.bf2a005c.js",
+    "static/js/453.3417c19d.chunk.js": "/ValentineSpecial/static/js/453.3417c19d.chunk.js",
+    "index.html": "/ValentineSpecial/index.html",
+    "main.683e40c2.css.map": "/ValentineSpecial/static/css/main.683e40c2.css.map",
+    "main.bf2a005c.js.map": "/ValentineSpecial/static/js/main.bf2a005c.js.map",
+    "453.3417c19d.chunk.js.map": "/ValentineSpecial/static/js/453.3417c19d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.683e40c2.css",
-    "static/js/main.d0213591.js"
+    "static/js/main.bf2a005c.js"
   ]
 }

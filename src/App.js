@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import './App.css';
+import image1 from "./assets/bubu 2.webp"
+import image2 from "./assets/dudu1.jpeg"
 
 function App() {
   const [accepted, setAccepted] = useState(false);
@@ -126,8 +128,8 @@ function App() {
             </p>
             
             <div className="cute-images">
-              <img src="" alt="Cute couple hugging" className="cute-img" />
-              <img src="" alt="Cute couple together" className="cute-img" />
+              <img src={image1} alt="Cute couple hugging" className="cute-img" />
+              <img src={image2} alt="Cute couple together" className="cute-img" />
             </div>
             
             <p className="stuck-forever">

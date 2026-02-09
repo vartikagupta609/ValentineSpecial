@@ -1,10 +1,36 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [accepted, setAccepted] = useState(false);
+  const [showTooLate, setShowTooLate] = useState(false);
   const [noButtonPos, setNoButtonPos] = useState(null);
   const noButtonRef = useRef(null);
+  const changeMindRef = useRef(null);
+
+  useEffect(() => {
+    if (!accepted) return;
+
+    const targetElement = changeMindRef.current;
+    if (!targetElement) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShowTooLate(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(targetElement);
+
+    return () => {
+      observer.unobserve(targetElement);
+    };
+  }, [accepted]);
 
   const handleMouseMove = (e) => {
     if (accepted || !noButtonRef.current) return;
@@ -82,7 +108,7 @@ function App() {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
           <div className="good-choice-message">
-            Good Choice Dudu! 😊💖
+            Good Choice Dudu! 😘💖
           </div>
           <div className="success-card">
             <div className="celebration">🎉</div>
@@ -97,7 +123,6 @@ function App() {
           <div className="extra-message">
             <p className="unlocked-text">
               You just unlocked unlimited hugs, kisses, and cuddles<br />
-              (redeemable very soon I promise)
             </p>
             
             <div className="cute-images">
@@ -109,23 +134,26 @@ function App() {
               Now you're stuck with me forever ∞
             </p>
             
-            <p className="change-mind">
+            <p ref={changeMindRef} className="change-mind">
               Wait... do you want to change your mind? 🤔
             </p>
+
             
-            <div className="too-late-section">
-              <h2 className="too-late-title">TOO LATE! 😬</h2>
-              <p className="too-late-subtitle">You already said YES, which means:</p>
-              
-              <div className="rules-list">
-                <p className="rule-item no-rule">❌ No take-backs allowed</p>
-                <p className="rule-item no-rule">❌ You're legally mine now (I checked)</p>
-                <p className="rule-item no-rule">❌ Every 'no' from now on = 10 extra kisses every day</p>
-                <p className="rule-item yes-rule">✅ You're stuck with your mutki bubu FOREVER 😈</p>
+            {showTooLate && (
+              <div className="too-late-section">
+                <h2 className="too-late-title">TOO LATE! 😬</h2>
+                <p className="too-late-subtitle">You already said YES, which means:</p>
+                
+                <div className="rules-list">
+                  <p className="rule-item no-rule">❌ No take-backs allowed</p>
+                  <p className="rule-item no-rule">❌ You're legally mine now (I checked)</p>
+                  <p className="rule-item no-rule">❌ Every 'no' from now on = 10 extra kisses every day</p>
+                  <p className="rule-item yes-rule">✅ You're stuck with your mutki bubu FOREVER 😈</p>
+                </div>
+                
+                <p className="deal-with-it">Deal with it 😘💕</p>
               </div>
-              
-              <p className="deal-with-it">Deal with it 😘💕</p>
-            </div>
+            )}
           </div>
         </div>
       )}

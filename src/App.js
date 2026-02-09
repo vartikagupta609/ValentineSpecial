@@ -108,15 +108,15 @@ function App() {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
           <div className="good-choice-message">
-            Good Choice Dudu! 😘💖
+             Good Choice Dudu! 😘💖
           </div>
           <div className="success-card">
             <div className="celebration">🎉</div>
             <h1 className="success-message">
-              Happy Valentine's Day! 💖
+               Happy Valentine's Day! 💖
             </h1>
             <div className="hearts-celebration">
-              💕 💗 💝 💖 💞 💓
+             💕 💗 💝 💖 💞 💓
             </div>
           </div>
           

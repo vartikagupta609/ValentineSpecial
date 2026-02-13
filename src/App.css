@@ -318,3 +318,165 @@
   font-weight: 600;
   margin-top: 25px;
 }
+
+@media (max-width: 768px) {
+  .App {
+    padding: 20px 10px;
+  }
+
+  .valentine-card, .success-card {
+    padding: 30px 25px;
+    max-width: 90vw;
+  }
+
+  .valentine-message {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .card-header .emoji {
+    font-size: 3rem;
+  }
+
+  .yes-button, .no-button {
+    padding: 12px 35px;
+    font-size: 1.1rem;
+  }
+
+  .button-container {
+    gap: 15px;
+  }
+
+  .good-choice-message {
+    font-size: 1.8rem;
+  }
+
+  .success-message {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .celebration {
+    font-size: 3.5rem;
+  }
+
+  .hearts-celebration {
+    font-size: 2rem;
+  }
+
+  .extra-message {
+    max-width: 90vw;
+    padding: 0 10px;
+  }
+
+  .unlocked-text {
+    font-size: 1rem;
+  }
+
+  .cute-images {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cute-img {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+  }
+
+  .stuck-forever {
+    font-size: 1.3rem;
+  }
+
+  .change-mind {
+    font-size: 1rem;
+  }
+
+  .too-late-section {
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .too-late-title {
+    font-size: 2rem;
+  }
+
+  .too-late-subtitle {
+    font-size: 1rem;
+  }
+
+  .rules-list {
+    max-width: 100%;
+  }
+
+  .rule-item {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .deal-with-it {
+    font-size: 1.3rem;
+  }
+
+  .floating-hearts .heart {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .valentine-message {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .valentine-card, .success-card {
+    padding: 25px 20px;
+  }
+
+  .yes-button, .no-button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+
+  .good-choice-message {
+    font-size: 1.5rem;
+  }
+
+  .success-message {
+    font-size: 1.7rem;
+  }
+
+  .celebration {
+    font-size: 3rem;
+  }
+
+  .hearts-celebration {
+    font-size: 1.8rem;
+  }
+
+  .unlocked-text {
+    font-size: 0.9rem;
+  }
+
+  .cute-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stuck-forever {
+    font-size: 1.2rem;
+  }
+
+  .too-late-title {
+    font-size: 1.7rem;
+  }
+
+  .rule-item {
+    font-size: 0.9rem;
+  }
+
+  .floating-hearts .heart {
+    font-size: 1.2rem;
+  }
+}

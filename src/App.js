@@ -34,13 +34,10 @@ function App() {
     };
   }, [accepted]);
 
-  const handleMouseMove = (e) => {
+  const moveButton = (cursorX, cursorY) => {
     if (accepted || !noButtonRef.current) return;
     
     const button = noButtonRef.current.getBoundingClientRect();
-    const cursorX = e.clientX;
-    const cursorY = e.clientY;
-    
     const buttonCenterX = button.left + button.width / 2;
     const buttonCenterY = button.top + button.height / 2;
     
@@ -65,8 +62,18 @@ function App() {
     }
   };
 
+  const handleMouseMove = (e) => {
+    moveButton(e.clientX, e.clientY);
+  };
+
+  const handleTouchMove = (e) => {
+    if (e.touches.length > 0) {
+      moveButton(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  };
+
   return (
-    <div className="App" onMouseMove={handleMouseMove}>
+    <div className="App" onMouseMove={handleMouseMove} onTouchMove={handleTouchMove}>
       <div className="floating-hearts">
         <span className="heart">💕</span>
         <span className="heart">💖</span>
@@ -121,6 +128,7 @@ function App() {
              💕 💗 💝 💖 💞 💓
             </div>
           </div>
+
           
           <div className="extra-message">
             <p className="unlocked-text">
@@ -156,6 +164,20 @@ function App() {
                 <p className="deal-with-it">Deal with it 😘💕</p>
               </div>
             )}
+
+<div className="too-late-section">
+                {/* <h2 className="too-late-title"> 😬</h2> */}
+                {/* <p className="too-late-subtitle">Happy Valentine’s Day to the man who stole my heart… and still refuses to give it back! 😘</p> */}
+                
+                <div className="rules-list">
+                  <p className="rule-item yes-rule">Happy Valentine’s Day to the man who stole my heart… and still refuses to give it back! 😘</p>
+                  <p className="rule-item yes-rule">Life with you is my favorite adventure — full of love, laughter, and your terrible laugh. You’re my husband, my best friend, my personal bodyguard, and my lifetime Valentine.</p>
+                  <p className="rule-item yes-rule">I promise to keep loving you, annoying you, supporting you, and stealing your hoodies forever. ❤️</p>
+                  <p className="rule-item yes-rule">Forever yours… even when we argue about your habits of saying anything that annoys me😄💕</p>
+                </div>
+                
+                {/* <p className="deal-with-it">                😘💕</p> */}
+              </div>
           </div>
         </div>
       )}
